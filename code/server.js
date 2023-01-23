@@ -65,6 +65,10 @@ app.get('/api/listTodos', (req, resp) => {
   resp.send(JSON.stringify(todos));
 });
 
+app.get('/api/test', (req,res) => {
+  res.send('hello world')
+})
+
 // create api
 app.get('/api/createTodo', (req, resp) => {
   const { todo: todoStr } = req.query;
